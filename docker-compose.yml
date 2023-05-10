@@ -52,6 +52,14 @@ services:
     depends_on:
       - elasticsearch
 
+  # apm:
+  #   image: 'docker.elastic.co/apm/apm-server:7.10.2'
+  #   ports:
+  #     - "8200:8200"
+  #   hostname: apm
+  #   depends_on:
+  #     - elasticsearch
+
 volumes:
   pgdata:
     driver: local

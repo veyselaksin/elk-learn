@@ -47,6 +47,7 @@ func main() {
 
 	h := handler.New(dbInstance, esClient, logger)
 	router := gin.Default()
+	// router.Use(apmgin.Middleware(router))
 	rg := router.Group("/v1")
 	h.Register(rg)
 	router.Run(":8080")
